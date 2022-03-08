@@ -14,5 +14,8 @@
     "del": "del ./dist"
   },
   "author": "Amir Rahimi web3senior@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
 }
