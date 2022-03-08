@@ -1,0 +1,18 @@
+{
+  "name": "web3sign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:config": "webpack --config webpack.config.js",
+    "build:dev": "npx webpack -d",
+    "build:production": "npx webpack -p",
+    "webpack": "npx webpack",
+    "watch": "npx webpack -w --mode=development",
+    "clean": "rm dist/*.bundle.js",
+    "del": "del ./dist"
+  },
+  "author": "Amir Rahimi web3senior@gmail.com",
+  "license": "ISC"
+}
