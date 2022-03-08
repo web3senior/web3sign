@@ -1,4 +1,6 @@
-
+/**
+ * Web3Sign class defination
+ */
 export default class Web3Sign {
     static #WE = window.ethereum
 
@@ -11,7 +13,7 @@ export default class Web3Sign {
         if (typeof Web3Sign.#WE === 'undefined')
             return {
                 result: false,
-                message: 'MetaMask is not installed!'
+                message: 'Not found any crypto wallet!'
             }
         Web3Sign.#WE.on('accountsChanged', (accounts) => {
             console.log('Time to reload UI.')
