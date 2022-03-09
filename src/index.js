@@ -1,28 +1,23 @@
-/**
- * Web3Sign class defination
- */
-export default class Web3Sign {
-    static #WE = window.ethereum
-
+export default class {
     constructor() {
         this.initial()
     }
 
     // Is MetaMask added the global varialble?
     initial() {
-        if (typeof Web3Sign.#WE === 'undefined')
+        if (typeof window.ethereum === 'undefined')
             return {
                 result: false,
                 message: 'Not found any crypto wallet!'
             }
-        Web3Sign.#WE.on('accountsChanged', (accounts) => {
+        window.ethereum.on('accountsChanged', (accounts) => {
             console.log('Time to reload UI.')
         })
     }
 
     // Make sure users are using MetaMask
     MustBeMetaMask() {
-        if (!Web3Sign.#WE.isMetaMask)
+        if (!window.ethereum.isMetaMask)
             return {
                 result: false,
                 message: 'MetaMask is not installed!'
@@ -30,17 +25,17 @@ export default class Web3Sign {
         else
             return {
                 result: true,
-                message: Web3Sign.#WE.isMetaMask
+                message: window.ethereum.isMetaMask
             }
     }
 
     // Or connect
     async getAccount() {
-        if (! await Web3Sign.#WE._metamask.isUnlocked())
+        if (! await window.ethereum._metamask.isUnlocked())
             return {
                 result: false,
                 message: 'Unlock MetaMask and try again.'
             }
-        return await Web3Sign.#WE.request({ method: 'eth_requestAccounts' })
+        return await window.ethereum.request({ method: 'eth_requestAccounts' })
     }
 }

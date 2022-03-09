@@ -1,4 +1,4 @@
-import Web3Sign from './utility/web3sign';
+import Web3Sign from './../src/index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('button').addEventListener('click', async () => {
