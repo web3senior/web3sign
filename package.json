@@ -13,8 +13,26 @@
     "clean": "rm dist/*.bundle.js",
     "del": "del ./dist"
   },
-  "author": "Amir Rahimi web3senior@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web3senior/web3sign.git"
+  },
+  "keywords": [
+    "ethereum",
+    "wallet",
+    "web3",
+    "web3js",
+    "metamask",
+    "web3-javascript",
+    "etherjs",
+    "web3-react"
+  ],
+  "author": "Amir Rahimi <web3senior@gmail.com> (https://lampstack.dev)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monatheoctocat/my_package/issues"
+  },
+  "homepage": "https://github.com/monatheoctocat/my_package",
   "devDependencies": {
     "webpack-cli": "^4.9.2"
   }
