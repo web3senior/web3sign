@@ -44,27 +44,3 @@ export default class Web3Sign {
         return await Web3Sign.#WE.request({ method: 'eth_requestAccounts' })
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- //
-        // ethereum.networkVersion
-        // ethereum.selectedAddress
-        // await ethereum.request({ method: 'eth_requestAccounts' });

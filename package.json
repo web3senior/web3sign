@@ -30,9 +30,9 @@
   "author": "Amir Rahimi <web3senior@gmail.com> (https://lampstack.dev)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/monatheoctocat/my_package/issues"
+    "url": "https://github.com/web3senior/web3sign/issues"
   },
-  "homepage": "https://github.com/monatheoctocat/my_package",
+  "homepage": "https://github.com/web3senior/web3sign",
   "devDependencies": {
     "webpack-cli": "^4.9.2"
   }
