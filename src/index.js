@@ -1,17 +1,46 @@
-import Web3Sign from './utility/web3sign';
+/**
+ * Web3Sign class defination
+ */
+export default class Web3Sign {
+    static #WE = window.ethereum
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('button').addEventListener('click', async () => {
-        const web3sign = new Web3Sign()
+    constructor() {
+        this.initial()
+    }
 
-        try {
-            web3sign.getAccount().then((response) => {
-                console.log(response)
-                // More code here
-            })
-        
-        } catch (e) {
-            console.error(e)
-        }
-    })
-})
+    // Is MetaMask added the global varialble?
+    initial() {
+        if (typeof Web3Sign.#WE === 'undefined')
+            return {
+                result: false,
+                message: 'Not found any crypto wallet!'
+            }
+        Web3Sign.#WE.on('accountsChanged', (accounts) => {
+            console.log('Time to reload UI.')
+        })
+    }
+
+    // Make sure users are using MetaMask
+    MustBeMetaMask() {
+        if (!Web3Sign.#WE.isMetaMask)
+            return {
+                result: false,
+                message: 'MetaMask is not installed!'
+            }
+        else
+            return {
+                result: true,
+                message: Web3Sign.#WE.isMetaMask
+            }
+    }
+
+    // Or connect
+    async getAccount() {
+        if (! await Web3Sign.#WE._metamask.isUnlocked())
+            return {
+                result: false,
+                message: 'Unlock MetaMask and try again.'
+            }
+        return await Web3Sign.#WE.request({ method: 'eth_requestAccounts' })
+    }
+}
