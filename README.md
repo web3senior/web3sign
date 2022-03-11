@@ -4,7 +4,6 @@
 [![GitHub license](https://img.shields.io/github/license/web3senior/web3sign)](https://github.com/web3senior/web3sign)
 ![GitHub commit checks state](https://img.shields.io/github/checks-status/badges/shields/91b108d4b7359b2f8794a4614c11cb1157dc9fff)
 ![GitHub last commit](https://img.shields.io/github/last-commit/web3senior/web3sign)
-[![](https://data.jsdelivr.com/v1/package/npm/@openrelay/web3-sign-element/badge)](https://www.jsdelivr.com/package/npm/@openrelay/web3-sign-element)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fweb3senior)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fweb3senior%2Fweb3sign)
 # Web3Sign
 The purpose of this tiny class is to enable user interactions and experience on Ethereum-based websites.
