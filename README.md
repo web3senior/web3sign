@@ -18,9 +18,11 @@ All in all, this class contains several classes that you can use in your project
 - Force users to use MetaMask & Checking MetaMask that is it lock or not
 - Send sign request and get users' accounts
 
+## Install
+`npm i web3sign`
 
 ## How to use
-        import Web3Sign from './utility/web3sign';
+        import Web3Sign from "web3sign";
         const web3sign = new Web3Sign()
         
         try {
